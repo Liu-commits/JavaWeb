@@ -1,6 +1,7 @@
 package com.lyq.servlet;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadBase;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -31,6 +33,11 @@ public class Upload3Servlet extends HttpServlet {
 		DiskFileItemFactory factory = new DiskFileItemFactory();
 		//得到解析器
 		ServletFileUpload fileUpload = new ServletFileUpload(factory);
+		//设置文件上传大小限制100k
+		fileUpload.setFileSizeMax(100*1024);
+		//限制整个表单大小为1m
+		fileUpload.setSizeMax(1024*1024);
+		
 		//解析数据
 		try {
 			List<FileItem> item = fileUpload.parseRequest(request);
@@ -59,7 +66,16 @@ public class Upload3Servlet extends HttpServlet {
 			File destFile = new File(dirFile,savename);
 			//保存文件
 			fi.write(destFile);
-		} catch (Exception e) {
+		} catch(FileUploadException e){
+			if (e instanceof FileUploadBase.FileSizeLimitExceededException) {
+				request.setAttribute("msg", "您上传的文件超出了100KB，请检查！");
+				request.getRequestDispatcher("/form3.jsp").forward(request, response);
+			}else if (e instanceof FileUploadBase.SizeLimitExceededException) {
+				request.setAttribute("msg", "您上传的文件总大小超出了1MB，请检查！");
+				request.getRequestDispatcher("/form3.jsp").forward(request, response);
+			}
+		}
+		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
