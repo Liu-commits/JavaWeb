@@ -5,19 +5,19 @@
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>Upload1Servlet</servlet-name>
-    <servlet-class>cocm.lyq.servlet.Upload1Servlet</servlet-class>
+    <servlet-class>com.lyq.servlet.Upload1Servlet</servlet-class>
   </servlet>
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>Upload2Servlet</servlet-name>
-    <servlet-class>cocm.lyq.servlet.Upload2Servlet</servlet-class>
+    <servlet-class>com.lyq.servlet.Upload2Servlet</servlet-class>
   </servlet>
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>Upload3Servlet</servlet-name>
-    <servlet-class>cocm.lyq.servlet.Upload3Servlet</servlet-class>
+    <servlet-class>com.lyq.servlet.Upload3Servlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Upload1Servlet</servlet-name>
