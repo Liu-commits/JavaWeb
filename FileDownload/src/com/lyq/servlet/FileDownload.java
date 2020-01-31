@@ -24,9 +24,11 @@ public class FileDownload extends HttpServlet {
 		 * contentDisposition
 		 */
 		String fileName = "D:/KwDownload/song/xs.mp3";
+		//解决浏览器中中文文件名称乱码问题
+		String framename = new String("xs.mp3".getBytes("GBK"),"ISO-8859-1");
 		//获取文件的mime type类型
 		String contentType = this.getServletContext().getMimeType(fileName);
-		String contentDisposition = "attachment;filename=a.mp3";
+		String contentDisposition = "attachment;filename="+framename;
 		FileInputStream fis = new FileInputStream(fileName);
 		//设置响应头
 		response.setHeader("Content-Type", contentType);
