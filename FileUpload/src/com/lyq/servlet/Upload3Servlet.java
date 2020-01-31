@@ -30,7 +30,8 @@ public class Upload3Servlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		
 		//得到工厂
-		DiskFileItemFactory factory = new DiskFileItemFactory();
+		//设置缓存大小为20kb及临时目录
+		DiskFileItemFactory factory = new DiskFileItemFactory(20*1024,new File("F:/f/temp"));
 		//得到解析器
 		ServletFileUpload fileUpload = new ServletFileUpload(factory);
 		//设置文件上传大小限制100k
