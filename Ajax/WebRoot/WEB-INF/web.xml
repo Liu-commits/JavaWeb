@@ -25,10 +25,29 @@
     <servlet-name>CServlet</servlet-name>
     <servlet-class>com.lyq.servlet.CServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CityServlet</servlet-name>
+    <servlet-class>com.lyq.servlet.CityServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProvinceServlet</servlet-name>
+    <servlet-class>com.lyq.servlet.ProvinceServlet</servlet-class>
+  </servlet>
 
 
 
-
+<servlet-mapping>
+    <servlet-name>CityServlet</servlet-name>
+    <url-pattern>/CityServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProvinceServlet</servlet-name>
+    <url-pattern>/ProvinceServlet</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>AServlet</servlet-name>
     <url-pattern>/AServlet</url-pattern>
