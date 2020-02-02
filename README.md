@@ -23,6 +23,6 @@
 
 #Ajax
 =
-*ajax Get与Post
-*ajax 响应xml
+*ajax Get与Post<br/>
+*ajax 响应xml<br/>
 
