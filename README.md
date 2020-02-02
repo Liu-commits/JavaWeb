@@ -21,4 +21,8 @@
 *需要输入邮箱的账号、授权码<br/>
 *添加附件<br/>
 
+#Ajax
+=
+*ajax Get与Post
+*ajax 响应xml
 
