@@ -25,4 +25,5 @@
 =
 *ajax Get与Post<br/>
 *ajax 响应xml<br/>
+*ajax 用户名校验<br/>
 
