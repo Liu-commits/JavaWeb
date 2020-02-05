@@ -25,6 +25,7 @@ Ajax
 =
 *ajax Get与Post<br/>
 *ajax 响应xml<br/>
+*ajax 响应json<br/>
 *ajax 用户名校验<br/>
 *ajax 省市联动<br/>
 
