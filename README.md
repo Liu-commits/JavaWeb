@@ -28,3 +28,8 @@
 *ajax 用户名校验<br/>
 *ajax 省市联动<br/>
 
+#XStream
+=
+*通过XStream将JavaBean转换为XML<br/>
+
+
