@@ -37,6 +37,13 @@
     <servlet-name>ProvinceServlet</servlet-name>
     <servlet-class>com.lyq.servlet.ProvinceServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DServlet</servlet-name>
+    <servlet-class>com.lyq.servlet.DServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -63,6 +70,10 @@
   <servlet-mapping>
     <servlet-name>CServlet</servlet-name>
     <url-pattern>/CServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DServlet</servlet-name>
+    <url-pattern>/DServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
